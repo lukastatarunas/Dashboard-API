@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/77ccb03b37.js"></script>
+    </head>
+    <body>
+      <div class="grid-container">
+        <header class="header">
+          <!-- <div class="header-item"> -->
+              <a class="header-link" href="#">
+                <i class="fas fa-folder header-icon"></i>
+                <p class="header-paragraph issues"><strong>Issues History</strong></p>
+                <i class="fas fa-sort-down header-icon"></i>
+              </a>
+          <!-- </div>
+          <div class="header-item"> -->
+              <a class="header-link" href="#">
+                <i class="fas fa-database header-icon"></i>
+                <p class="header-paragraph dashboards"><strong>Dashboards</strong></p>
+                <i class="fas fa-sort-down header-icon"></i>
+              </a>
+          <!-- </div>
+          <div class="header-item"> -->
+              <a class="header-link" href="#">
+                <i class="fas fa-star-of-life header-icon"></i>
+                <p class="header-paragraph projects"><strong>Projects</strong></p>
+                <i class="fas fa-sort-down header-icon"></i>
+              </a>
+          <!-- </div>
+          <div class="header-item"> -->
+              <a class="header-link" href="#">
+                <form action="">
+                  <input class="search" type="search" placeholder="Search..." name="" value="">
+                  <i class="fas fa-search search-icon"></i>
+                </form>
+                <!-- <input class="search" type="search" placeholder="Search..." name="" value="">
+                <i class="fas fa-search header-icon"></i> -->
+              </a>
+          <!-- </div>
+          <div class="header-item"> -->
+              <a class="header-link" href="#">
+                <img class="header-img" src="https://randomuser.me/api/portraits/men/32.jpg">
+                <i class="fas fa-sort-down header-icon"></i>
+              </a>
+          <!-- </div> -->
+        </header>
+        <aside class="sidenav">
+          <a class="sidenav-link" href="#"><img class="sidenav-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/66160299_359752961405346_6344635821202604032_n.png?_nc_cat=107&_nc_oc=AQni_r7m-QwLhOTXt4bmxK7qPMkZgYHfJ_0TyMZoRABrstp-iZIDhXdg7tZ6im580dEskzAzbg8-B3I8XNLYzWxK&_nc_ad=z-m&_nc_cid=0&_nc_zor=9&_nc_ht=scontent.xx&oh=879760fa8feedf7bf28647bcaccae1cb&oe=5DB8DFEE"></a>
+          <a class="sidenav-link" href="#"><i class="fas fa-cog sidenav-icons"></i>Theme Settings</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-book sidenav-icons"></i>Documentation</a><hr class="hr">
+          <a class="sidenav-link" href="#"><i class="fas fa-home sidenav-icons"></i>Dashboard</a><hr class="hr">
+          <a class="sidenav-link" href="#"><i class="fas fa-user sidenav-icons"></i>Profile</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-sms sidenav-icons"></i>Messaging</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-envelope sidenav-icons"></i>Mail</a>
+          <a class="sidenav-link" href="#"><i class="far fa-calendar-alt sidenav-icons"></i>Callendar</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-image sidenav-icons"></i>Gallery</a><hr class="hr">
+          <a class="sidenav-link" href="#"><i class="fas fa-copy sidenav-icons"></i>Layout</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-star sidenav-icons"></i>Icons</a>
+          <a class="sidenav-link" href="#"><i class="fas fa-font sidenav-icons"></i>Typography</a><hr class="hr">
+          <a class="sidenav-link" href="#">Forms</a>
+          <a class="sidenav-link" href="#">Components</a>
+          <a class="sidenav-link" href="#">Tables</a>
+          <a class="sidenav-link" href="#">Charts</a><hr class="hr">
+          <a class="sidenav-link" href="#"><i class="fas fa-copy sidenav-icons"></i>Pages</a><hr class="hr">
+          <a class="sidenav-link" href="#"><button type="button" disabled>Disabled Item</button></a>
+          <a class="sidenav-link" href="#">Infinity Nested</a><hr class="hr">
+          <a class="sidenav-link" href="#">Solar System</a>
+          <a class="sidenav-link" href="#"><i class="far fa-circle sidenav-icons earth"></i>Earth</a>
+          <a class="sidenav-link" href="#"><i class="far fa-circle sidenav-icons mars"></i>Mars</a>
+          <a class="sidenav-link" href="#"><i class="far fa-circle sidenav-icons mercury"></i>Mercury</a>
+          <a class="sidenav-link" href="#"><i class="far fa-circle sidenav-icons jupiter"></i>Jupiter</a>
+          <a class="sidenav-link" href="./add_widget.html"><button>Add Widget</button></a>
+        </aside>
+        <main class="main">
+          <div class="main-card main-1">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="main-card main-2">
+            <nav class="nav">
+              <p class="nav-paragraph">Conversation: <strong>Software</strong></p>
+              <i class="fas fa-cog sidenav-icons nav-icon"></i>
+              <i class="fas fa-sort-down header-icon nav-icon"></i><br>
+            </nav>
+            <div class="img-container">
+              <br>
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+            </div>
+          </div>
+          <div class="main-card main-3">
+            <nav class="nav">
+              <p class="nav-paragraph">Conversation: <strong>Software</strong></p>
+              <i class="fas fa-cog sidenav-icons nav-icon"></i>
+              <i class="fas fa-sort-down header-icon nav-icon"></i><br>
+            </nav>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="main-card main-4">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="main-card main-5">
+            <nav class="nav">
+              <p class="nav-paragraph">Conversation: <strong>Users</strong></p>
+              <i class="fas fa-cog sidenav-icons nav-icon"></i>
+              <i class="fas fa-sort-down header-icon nav-icon"></i><br>
+            </nav>
+            <div class="img-container">
+              <br>
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+              <img class="img" src="https://www.cleanuitemplate.com/assets/img/logos/ET-logo-short.png">
+            </div>
+          </div>
+          <div class="main-card main-6">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+            </table>
+          </div>
+          <div class="main-card main-7">
+            <nav class="nav">
+              <p class="nav-paragraph">Dashboard: <strong>Users</strong></p>
+              <i class="fas fa-cog sidenav-icons nav-icon"></i>
+              <i class="fas fa-sort-down header-icon nav-icon"></i><br>
+            </nav>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="main-8">
+            <div class="main-card sub-card-1">
+              <div class="sub-card-wrapper">
+                <i class="fas fa-hand-point-up fa-5x sub-card-icon"></i>
+                <p class="sub-card-paragraph">Upgrade</p>
+                <p class="sub-card-paragraph">Finish</p>
+              </div>
+            </div>
+            <div class="main-card sub-card-2">
+              <div class="sub-card-wrapper">
+                <i class="fab fa-salesforce fa-5x sub-card-icon"></i>
+                <p class="sub-card-paragraph">Sale...</p>
+                <p class="sub-card-paragraph">View Report</p>
+              </div>
+            </div>
+            <div class="main-card sub-card-3">
+              <div class="sub-card-wrapper">
+                <h2 class="sub-card-header">Clean</h2>
+                <p class="sub-card-paragraph">Simple</p>
+                <p class="sub-card-paragraph">Responsive</p>
+              </div>
+            </div>
+            <div class="main-card sub-card-4">
+              <div class="sub-card-wrapper">
+                <i class="fas fa-users fa-5x sub-card-icon"></i>
+                <p class="sub-card-paragraph">Total: 24 467</p>
+                <p class="sub-card-paragraph">New: 456</p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-card footer-1">
+            <i class="fas fa-users fa-3x footer-icons"></i>
+            <h1 class="footer-header">Users</h1>
+            <p class="footer-paragraph">Total: 24 467</p>
+          </div>
+          <div class="footer-card footer-2">
+            <i class="fas fa-database fa-3x footer-icons"></i>
+            <h1 class="footer-header">Databases</h1>
+            <p class="footer-paragraph">Total: 765</p>
+          </div>
+          <div class="footer-card footer-3">
+            <i class="fas fa-project-diagram fa-3x footer-icons"></i>
+            <h1 class="bandwidth footer-header">Bandwidth</h1>
+            <p class="bandwidth footer-paragraph">160.32 GB/S</p>
+          </div>
+          <div class="footer-card footer-4">
+            <i class="fas fa-chart-pie fa-3x footer-icons"></i>
+            <h1 class="dailysales footer-header">Daily Sales</h1>
+            <p class="dailysales footer-paragraph">Total: 765</p>
+          </div>
+        </footer>
+      </div>
+      <script src="scripts.js"></script>
+    </body>
+</html>
