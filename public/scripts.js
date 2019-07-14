@@ -1,12 +1,12 @@
 fetch("http://localhost:3000/data")
   .then(res => res.json())
   .then(data => {
-    appendData(data);
+    getData(data);
     console.log(data);
   })
   .catch(err => console.log(err));
 
-function appendData(data) {
+function getData(data) {
   for (let i = 0; i < 4; i++) {
     let table = document.getElementById("table1").getElementsByTagName("tbody")[0];
 
@@ -176,4 +176,31 @@ function appendData(data) {
     cell1ForLarry = newRowForLarry.insertCell(3);
     cell1ForLarry.innerHTML = data[2].userName;
   }
+}
+
+function readFormData() {
+  let formData = {};
+  formData["id"] = document.getElementById("id").value;
+  formData["firstName"] = document.getElementById("firstName").value;
+  formData["lastName"] = document.getElementById("lastName").value;
+  formData["userName"] = document.getElementById("userName").value;
+  return formData;
+}
+
+function onFormSubmit() {
+  let formData = readFormData();
+  postFormData(formData);
+}
+
+function postFormData(data) {
+  let table = document.getElementById("table1").getElementsByTagName("tbody")[0];
+  let newRow = table.insertRow(table.length);
+  cell1 = newRow.insertCell(0);
+  cell1.innerHTML = data.id;
+  cell2 = newRow.insertCell(1);
+  cell2.innerHTML = data.firstName;
+  cell3 = newRow.insertCell(2);
+  cell3.innerHTML = data.lastName;
+  cell4 = newRow.insertCell(3);
+  cell4.innerHTML = data.userName;
 }

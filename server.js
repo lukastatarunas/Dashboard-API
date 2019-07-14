@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/data', (req, res) => {
     res.header("Content-Type",'application/json',)
     res.send(data);
-} );
+});
 
 const port = 3000;
 app.listen(port);

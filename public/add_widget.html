@@ -3,25 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>Add Widget</title>
-        <link rel="stylesheet" href="add_widgets.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/77ccb03b37.js"></script>
     </head>
     <body>
-        <form action="">
+        <form action="" autocomplete="off" onsubmit="event.preventDefault();onFormSubmit();">
             <br>
-            Title: <input type="text" name="title"><br><br>
-            Column number: <input type="text" name="col-num"><br><br>
-            <select name="type-selection">
+            <label for="id">ID:</label>
+            <input type="text" name="id" id="id"><br><br>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName"><br><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName"><br><br>
+            <label for="userName">User Name:</label>
+            <input type="text" name="userName" id="userName"><br><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+        <!-- <form action="" autocomplete="off" onsubmit="event.preventDefault();onFormSubmit();">
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title"><br><br>
+            <label for="col-num">Column number:</label>
+            <input type="text" name="col-num" id="col-num"><br><br>
+            <select name="type-selection" id="type-selection">
                 <option value="volvo">userList</option>
                 <option value="saab">messages</option>
             </select><br><br>
-            <select name="header-type-selection">
+            <select name="header-type-selection" id="header-type-selection">
                 <option value="volvo">light</option>
                 <option value="saab">dark</option>
             </select><br><br>
-            <textarea rows="4" cols="50"></textarea><br><br>
-            <input type="submit" value="Save">
-        </form>
+            <textarea rows="4" cols="50" id="textarea"></textarea><br><br>
+            <a href="./index.html"><input type="submit" value="Submit" id="submit"></a>
+        </form> -->
+        <script src="scripts.js"></script>
     </body>
 </html>
