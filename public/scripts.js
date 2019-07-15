@@ -1,206 +1,102 @@
+const main = document.getElementById("main");
+
+const div = document.createElement("div");
+div.setAttribute("class", "main-card main-1");
+
+main.appendChild(div);
+
+const table = document.createElement("table");
+table.setAttribute("class", "table");
+
+div.appendChild(table);
+
+const thead = document.createElement("thead");
+thead.setAttribute("class", "thead-dark");
+
+table.appendChild(thead);
+
+const tr0 = document.createElement("tr");
+
+thead.appendChild(tr0);
+
+const th1 = document.createElement("th");
+const th2 = document.createElement("th");
+const th3 = document.createElement("th");
+const th4 = document.createElement("th");
+
+tr0.appendChild(th1);
+tr0.appendChild(th2);
+tr0.appendChild(th3);
+tr0.appendChild(th4);
+
+const tbody = document.createElement("tbody");
+
+table.appendChild(tbody);
+
+const tr1 = document.createElement("tr");
+const tr2 = document.createElement("tr");
+const tr3 = document.createElement("tr");
+
+tbody.appendChild(tr1);
+tbody.appendChild(tr2);
+tbody.appendChild(tr3);
+
+const th01 = document.createElement("th");
+const th02 = document.createElement("th");
+const th03 = document.createElement("th");
+
+tr1.appendChild(th01);
+tr2.appendChild(th02);
+tr3.appendChild(th03);
+
+const tdMark = document.createElement("td");
+const tdOtto = document.createElement("td");
+const tdmdo = document.createElement("td");
+
+tr1.appendChild(tdMark);
+tr1.appendChild(tdOtto);
+tr1.appendChild(tdmdo);
+
+const tdJacob = document.createElement("td");
+const tdThornton = document.createElement("td");
+const tdfat = document.createElement("td");
+
+tr2.appendChild(tdJacob);
+tr2.appendChild(tdThornton);
+tr2.appendChild(tdfat);
+
+const tdLarry = document.createElement("td");
+const tdtheBird = document.createElement("td");
+const tdtwitter = document.createElement("td");
+
+tr3.appendChild(tdLarry);
+tr3.appendChild(tdtheBird);
+tr3.appendChild(tdtwitter);
+
 fetch("http://localhost:3000/data")
   .then(res => res.json())
   .then(data => {
-    getData(data);
     console.log(data);
+    
+    th1.textContent = "#";
+    th2.textContent = "First Name";
+    th3.textContent = "Last Name";
+    th4.textContent = "User Name";
+
+    th01.textContent = data[0].data[0].id;
+    th02.textContent = data[0].data[1].id;
+    th03.textContent = data[0].data[2].id;
+
+    tdMark.textContent = data[0].data[0].firstName;
+    tdOtto.textContent = data[0].data[0].lastName;
+    tdmdo.textContent = data[0].data[0].userName;
+
+    tdJacob.textContent = data[0].data[1].firstName;
+    tdThornton.textContent = data[0].data[1].lastName;
+    tdfat.textContent = data[0].data[1].userName;
+
+    tdLarry.textContent = data[0].data[2].firstName;
+    tdtheBird.textContent = data[0].data[2].lastName;
+    tdtwitter.textContent = data[0].data[2].userName;
   })
   .catch(err => console.log(err));
-
-function getData(data) {
-  for (let i = 0; i < 4; i++) {
-    let table = document.getElementById("table1").getElementsByTagName("tbody")[0];
-
-    let newRowForMark = table.insertRow(table.length);
-    cell1ForMark = newRowForMark.insertCell(0);
-    cell1ForMark.innerHTML = data[0].id;
-    cell2ForMark = newRowForMark.insertCell(1);
-    cell2ForMark.innerHTML = data[0].firstName;
-    cell3ForMark = newRowForMark.insertCell(2);
-    cell3ForMark.innerHTML = data[0].lastName;
-    cell4ForMark = newRowForMark.insertCell(3);
-    cell4ForMark.innerHTML = data[0].userName;
-
-    let newRowForJacob = table.insertRow(table.length);
-    cell1ForJacob = newRowForJacob.insertCell(0);
-    cell1ForJacob.innerHTML = data[1].id;
-    cell2ForJacob = newRowForJacob.insertCell(1);
-    cell2ForJacob.innerHTML = data[1].firstName;
-    cell3ForJacob = newRowForJacob.insertCell(2);
-    cell3ForJacob.innerHTML = data[1].lastName;
-    cell4ForJacob = newRowForJacob.insertCell(3);
-    cell4ForJacob.innerHTML = data[1].userName;
-
-    let newRowForLarry = table.insertRow(table.length);
-    cell1ForLarry = newRowForLarry.insertCell(0);
-    cell1ForLarry.innerHTML = data[2].id;
-    cell1ForLarry = newRowForLarry.insertCell(1);
-    cell1ForLarry.innerHTML = data[2].firstName;
-    cell1ForLarry = newRowForLarry.insertCell(2);
-    cell1ForLarry.innerHTML = data[2].lastName;
-    cell1ForLarry = newRowForLarry.insertCell(3);
-    cell1ForLarry.innerHTML = data[2].userName;
-  }
-
-  for (let i = 0; i < 1; i++) {
-    let table = document.getElementById("table2").getElementsByTagName("tbody")[0];
-
-    let newRowForMark = table.insertRow(table.length);
-    cell1ForMark = newRowForMark.insertCell(0);
-    cell1ForMark.innerHTML = data[0].id;
-    cell2ForMark = newRowForMark.insertCell(1);
-    cell2ForMark.innerHTML = data[0].firstName;
-    cell3ForMark = newRowForMark.insertCell(2);
-    cell3ForMark.innerHTML = data[0].lastName;
-    cell4ForMark = newRowForMark.insertCell(3);
-    cell4ForMark.innerHTML = data[0].userName;
-
-    let newRowForJacob = table.insertRow(table.length);
-    cell1ForJacob = newRowForJacob.insertCell(0);
-    cell1ForJacob.innerHTML = data[1].id;
-    cell2ForJacob = newRowForJacob.insertCell(1);
-    cell2ForJacob.innerHTML = data[1].firstName;
-    cell3ForJacob = newRowForJacob.insertCell(2);
-    cell3ForJacob.innerHTML = data[1].lastName;
-    cell4ForJacob = newRowForJacob.insertCell(3);
-    cell4ForJacob.innerHTML = data[1].userName;
-
-    let newRowForLarry = table.insertRow(table.length);
-    cell1ForLarry = newRowForLarry.insertCell(0);
-    cell1ForLarry.innerHTML = data[2].id;
-    cell1ForLarry = newRowForLarry.insertCell(1);
-    cell1ForLarry.innerHTML = data[2].firstName;
-    cell1ForLarry = newRowForLarry.insertCell(2);
-    cell1ForLarry.innerHTML = data[2].lastName;
-    cell1ForLarry = newRowForLarry.insertCell(3);
-    cell1ForLarry.innerHTML = data[2].userName;
-  }
-
-  for (let i = 0; i < 2; i++) {
-    let table = document.getElementById("table3").getElementsByTagName("tbody")[0];
-
-    let newRowForMark = table.insertRow(table.length);
-    cell1ForMark = newRowForMark.insertCell(0);
-    cell1ForMark.innerHTML = data[0].id;
-    cell2ForMark = newRowForMark.insertCell(1);
-    cell2ForMark.innerHTML = data[0].firstName;
-    cell3ForMark = newRowForMark.insertCell(2);
-    cell3ForMark.innerHTML = data[0].lastName;
-    cell4ForMark = newRowForMark.insertCell(3);
-    cell4ForMark.innerHTML = data[0].userName;
-
-    let newRowForJacob = table.insertRow(table.length);
-    cell1ForJacob = newRowForJacob.insertCell(0);
-    cell1ForJacob.innerHTML = data[1].id;
-    cell2ForJacob = newRowForJacob.insertCell(1);
-    cell2ForJacob.innerHTML = data[1].firstName;
-    cell3ForJacob = newRowForJacob.insertCell(2);
-    cell3ForJacob.innerHTML = data[1].lastName;
-    cell4ForJacob = newRowForJacob.insertCell(3);
-    cell4ForJacob.innerHTML = data[1].userName;
-
-    let newRowForLarry = table.insertRow(table.length);
-    cell1ForLarry = newRowForLarry.insertCell(0);
-    cell1ForLarry.innerHTML = data[2].id;
-    cell1ForLarry = newRowForLarry.insertCell(1);
-    cell1ForLarry.innerHTML = data[2].firstName;
-    cell1ForLarry = newRowForLarry.insertCell(2);
-    cell1ForLarry.innerHTML = data[2].lastName;
-    cell1ForLarry = newRowForLarry.insertCell(3);
-    cell1ForLarry.innerHTML = data[2].userName;
-  }
-
-  for (let i = 0; i < 2; i++) {
-    let table = document.getElementById("table4").getElementsByTagName("tbody")[0];
-
-    let newRowForMark = table.insertRow(table.length);
-    cell1ForMark = newRowForMark.insertCell(0);
-    cell1ForMark.innerHTML = data[0].id;
-    cell2ForMark = newRowForMark.insertCell(1);
-    cell2ForMark.innerHTML = data[0].firstName;
-    cell3ForMark = newRowForMark.insertCell(2);
-    cell3ForMark.innerHTML = data[0].lastName;
-    cell4ForMark = newRowForMark.insertCell(3);
-    cell4ForMark.innerHTML = data[0].userName;
-
-    let newRowForJacob = table.insertRow(table.length);
-    cell1ForJacob = newRowForJacob.insertCell(0);
-    cell1ForJacob.innerHTML = data[1].id;
-    cell2ForJacob = newRowForJacob.insertCell(1);
-    cell2ForJacob.innerHTML = data[1].firstName;
-    cell3ForJacob = newRowForJacob.insertCell(2);
-    cell3ForJacob.innerHTML = data[1].lastName;
-    cell4ForJacob = newRowForJacob.insertCell(3);
-    cell4ForJacob.innerHTML = data[1].userName;
-
-    let newRowForLarry = table.insertRow(table.length);
-    cell1ForLarry = newRowForLarry.insertCell(0);
-    cell1ForLarry.innerHTML = data[2].id;
-    cell1ForLarry = newRowForLarry.insertCell(1);
-    cell1ForLarry.innerHTML = data[2].firstName;
-    cell1ForLarry = newRowForLarry.insertCell(2);
-    cell1ForLarry.innerHTML = data[2].lastName;
-    cell1ForLarry = newRowForLarry.insertCell(3);
-    cell1ForLarry.innerHTML = data[2].userName;
-  }
-
-  for (let i = 0; i < 1; i++) {
-    let table = document.getElementById("table5").getElementsByTagName("tbody")[0];
-
-    let newRowForMark = table.insertRow(table.length);
-    cell1ForMark = newRowForMark.insertCell(0);
-    cell1ForMark.innerHTML = data[0].id;
-    cell2ForMark = newRowForMark.insertCell(1);
-    cell2ForMark.innerHTML = data[0].firstName;
-    cell3ForMark = newRowForMark.insertCell(2);
-    cell3ForMark.innerHTML = data[0].lastName;
-    cell4ForMark = newRowForMark.insertCell(3);
-    cell4ForMark.innerHTML = data[0].userName;
-
-    let newRowForJacob = table.insertRow(table.length);
-    cell1ForJacob = newRowForJacob.insertCell(0);
-    cell1ForJacob.innerHTML = data[1].id;
-    cell2ForJacob = newRowForJacob.insertCell(1);
-    cell2ForJacob.innerHTML = data[1].firstName;
-    cell3ForJacob = newRowForJacob.insertCell(2);
-    cell3ForJacob.innerHTML = data[1].lastName;
-    cell4ForJacob = newRowForJacob.insertCell(3);
-    cell4ForJacob.innerHTML = data[1].userName;
-
-    let newRowForLarry = table.insertRow(table.length);
-    cell1ForLarry = newRowForLarry.insertCell(0);
-    cell1ForLarry.innerHTML = data[2].id;
-    cell1ForLarry = newRowForLarry.insertCell(1);
-    cell1ForLarry.innerHTML = data[2].firstName;
-    cell1ForLarry = newRowForLarry.insertCell(2);
-    cell1ForLarry.innerHTML = data[2].lastName;
-    cell1ForLarry = newRowForLarry.insertCell(3);
-    cell1ForLarry.innerHTML = data[2].userName;
-  }
-}
-
-function readFormData() {
-  let formData = {};
-  formData["id"] = document.getElementById("id").value;
-  formData["firstName"] = document.getElementById("firstName").value;
-  formData["lastName"] = document.getElementById("lastName").value;
-  formData["userName"] = document.getElementById("userName").value;
-  return formData;
-}
-
-function onFormSubmit() {
-  let formData = readFormData();
-  postFormData(formData);
-}
-
-function postFormData(data) {
-  let table = document.getElementById("table1").getElementsByTagName("tbody")[0];
-  let newRow = table.insertRow(table.length);
-  cell1 = newRow.insertCell(0);
-  cell1.innerHTML = data.id;
-  cell2 = newRow.insertCell(1);
-  cell2.innerHTML = data.firstName;
-  cell3 = newRow.insertCell(2);
-  cell3.innerHTML = data.lastName;
-  cell4 = newRow.insertCell(3);
-  cell4.innerHTML = data.userName;
-}
