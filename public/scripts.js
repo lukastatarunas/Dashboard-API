@@ -35,19 +35,26 @@ fetch("http://localhost:3000/data")
                   });
                   widget += `</tbody></table>`;
       }
-      // else {
-      //   widget += `<p class="p">`
-      //               item.data.forEach(rowData => {
-      //                 rowData.author;
-      //               })
-      //             `</p>
-      //               <article class="article">`
-      //               item.data.forEach(rowData => {
-      //                 rowData.message;
-      //               })
-      //               `</article>
-      //             `
-      // }
+      else {
+        widget += `<nav class="nav">
+                    <p class="nav-paragraph">Dashboard: <strong>Users</strong></p>
+                    <i class="fas fa-cog sidenav-icons nav-icon"></i>
+                    <i class="fas fa-sort-down header-icon nav-icon"></i><br>
+                   </nav>
+                   <p class="author" id="author">
+                      ${item.data.forEach(rowData => {
+                        rowData.author;
+                        console.log(rowData.author)
+                      })}
+                   </p>
+                   <article class="article" id="article">
+                      ${item.data.forEach(rowData => {
+                        rowData.article;
+                        console.log(rowData.article)
+                      })}
+                   </article>
+                  `
+      }
       widget += `</div>`
     });
     main.insertAdjacentHTML("afterbegin", widget);

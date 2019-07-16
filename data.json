@@ -9,16 +9,12 @@
         },
         { "id": "2", "column": "1", "type": "2", "title": "article", "headerType": "2", "data": 
             [ 
-                { "id": "1", "author": "Mark", "message": "Otto" },
-                { "id": "2", "author": "Jacob", "message": "Thornton" },
-                { "id": "3", "author": "Larry", "message": "the Bird" }
+                { "id": "3", "author": "David", "article": "Hey Nigga" }
             ]
         },
         { "id": "3", "column": "2", "type": "2", "title": "article", "headerType": "2", "data": 
             [ 
-                { "id": "1", "author": "Mark", "message": "Otto" },
-                { "id": "2", "author": "Jacob", "message": "Thornton" },
-                { "id": "3", "author": "Larry", "message": "the Bird" }
+                { "id": "3", "author": "Alex", "article": "Sup Nigga" }
             ]
         },
         { "id": "4", "column": "2", "type": "1", "title": "table", "headerType": "2", "data": 
