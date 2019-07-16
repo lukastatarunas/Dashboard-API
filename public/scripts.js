@@ -3,7 +3,7 @@ const articleType = "2";
 
 const main = document.getElementById("main");
 
-fetch("http://localhost:3000/data")
+fetch("http://localhost:8080/data")
   .then(res => res.json())
   .then(data => {
     console.log(data);
