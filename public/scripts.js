@@ -7,9 +7,9 @@ const main = document.getElementById("main");
 
 fetch("http://localhost:3000/data")
   .then(res => res.json())
-  .then(info => {
+  .then(data => {
     let widget = "";
-    info.data.forEach(item => {
+    data.forEach(item => {
       widget += `<div class="main-card">`
       if (item.type === tableType) {
         let headerType = item.headerType === "1" ? "thead-dark" : null;
@@ -36,13 +36,13 @@ fetch("http://localhost:3000/data")
                   widget += `</tbody></table>`;
       }
       else {
-        let authors = '';
+        let authors = "";
         
         item.data.forEach(rowData => {
           authors += `<p class="author" id="author">${rowData.author}</p>`
         })
 
-        let articles = '';
+        let articles = "";
 
         item.data.forEach(rowData => {
           articles += `<article class="article" id="article">${rowData.article}</article>`
@@ -67,39 +67,21 @@ fetch("http://localhost:3000/data")
 
 // POST  
 
-let info = { id: 4, firstName: "Larry", lastName: "theBird", userName: "twitter" };
+function onPostFormSubmit() {
+  let json = document.getElementById("textarea").value;
+  console.log(json)
+  return JSON.parse(json)
+}
 
-function post(e) {
-  e.preventDefault()
+function post(event) {
+  event.preventDefault()
   fetch("http://localhost:3000/post", {
     method: 'POST',
     headers: {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
     },
-    body: JSON.stringify(info)
+    body: JSON.stringify(onPostFormSubmit())
   })
   return window.location.href = "http://localhost:3000"
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// { "id": "4", "firstName": "Larry", "lastName": "theBird", "userName": "twitter" }
+}
