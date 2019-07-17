@@ -1,5 +1,4 @@
 const tableType = "1";
-
 const main = document.getElementById("main");
 
 // GET
@@ -67,14 +66,25 @@ fetch("http://localhost:3000/data")
 // POST  
 
 function onPostFormSubmit() {
-  let json = {
-    "id": "1",
-    "type": "1",
-    "title": document.getElementById("title").value,
-    "headerType": "1",
-    "data": JSON.parse(document.getElementById("textarea").value)
-  };
-  return json;
+  let typeSelection = document.getElementById("type-selection").value;
+  if (typeSelection === "userList") {
+    let json = {
+      "id": "1",
+      "type": "1",
+      "headerType": "1",
+      "data": JSON.parse(document.getElementById("textarea").value)
+    };
+    return json;
+  }
+  else {
+    let json = {
+      "id": "2",
+      "type": "2",
+      "headerType": "2",
+      "data": JSON.parse(document.getElementById("textarea").value)
+    };
+    return json;
+  }
 }
 
 function post(event) {
