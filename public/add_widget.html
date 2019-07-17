@@ -5,7 +5,7 @@
         <title>Add Widget</title>
     </head>
     <body>
-        <form action="/post" method="POST" name="postForm" autocomplete="off">
+        <form method="POST" name="postForm" onsubmit="return post(event)" autocomplete="off" id="postForm">
             <br>
             <label for="title">Title:</label>
             <input type="text" name="title" id="title"><br><br>

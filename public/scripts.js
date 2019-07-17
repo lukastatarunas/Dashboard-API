@@ -36,22 +36,26 @@ fetch("http://localhost:3000/data")
                   widget += `</tbody></table>`;
       }
       else {
+        let authors = '';
+        
+        item.data.forEach(rowData => {
+          authors += `<p class="author" id="author">${rowData.author}</p>`
+        })
+
+        let articles = '';
+
+        item.data.forEach(rowData => {
+          articles += `<article class="article" id="article">${rowData.article}</article>`
+        })
+
         widget += `<nav class="nav">
                     <p class="nav-paragraph">Dashboard: <strong>Users</strong></p>
                     <i class="fas fa-cog sidenav-icons nav-icon"></i>
                     <i class="fas fa-sort-down header-icon nav-icon"></i><br>
                    </nav>
-                   <p class="author" id="author">
-                      ${item.data.forEach(rowData => {
-                        rowData.author;
-                        console.log(rowData.author)
-                      })}
-                   </p>
+                      ${authors}  
                    <article class="article" id="article">
-                      ${item.data.forEach(rowData => {
-                        rowData.article;
-                        console.log(rowData.article)
-                      })}
+                      ${articles}
                    </article>
                   `
       }
@@ -65,17 +69,18 @@ fetch("http://localhost:3000/data")
 
 let info = { id: 4, firstName: "Larry", lastName: "theBird", userName: "twitter" };
 
-fetch("http://localhost:3000/post", {
-  method: 'POST',
-  body: JSON.stringify(info),
-  headers:{
+function post(e) {
+  e.preventDefault()
+  fetch("http://localhost:3000/post", {
+    method: 'POST',
+    headers: {
+    'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
-  }
-}).then(res => console.log(JSON.stringify(res)))
-  .catch(err => console.log(err));
-
-  
-
+    },
+    body: JSON.stringify(info)
+  })
+  return window.location.href = "http://localhost:3000"
+} 
 
 
 
