@@ -66,15 +66,27 @@ fetch("http://localhost:3000/data")
 // POST  
 
 function onPostFormSubmit() {
-  let typeSelection = document.getElementById("type-selection").value;
+  const typeSelection = document.getElementById("type-selection").value;
+  const headerTypeSelection = document.getElementById("header-type-selection").value;
   if (typeSelection === "userList") {
-    let json = {
-      "id": "1",
-      "type": "1",
-      "headerType": "1",
-      "data": JSON.parse(document.getElementById("textarea").value)
-    };
-    return json;
+    if (headerTypeSelection === "dark") {
+      let json = {
+        "id": "1",
+        "type": "1",
+        "headerType": "1",
+        "data": JSON.parse(document.getElementById("textarea").value)
+      };
+      return json;
+    }
+    else {
+      let json = {
+        "id": "1",
+        "type": "1",
+        "headerType": "2",
+        "data": JSON.parse(document.getElementById("textarea").value)
+      };
+      return json;
+    }
   }
   else {
     let json = {
@@ -103,7 +115,7 @@ function post(event) {
 // PUT
 
 function onPutFormSubmit() {
-  let json = document.getElementById("textarea").value;
+  const json = document.getElementById("textarea").value;
   return JSON.parse(json)
 }
 
@@ -119,3 +131,5 @@ function put(event) {
   })
   return window.location.href = "http://localhost:3000"
 }
+
+// DELETE
