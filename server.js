@@ -8,11 +8,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/data', (req, res) => res.send(data));
-app.post('/post', (req, res) => {
-    console.log(req.body);
-    data[0].data[0].data.push(req.body);
-    // data[1].data[0].data.push(req.body);
-});
+app.post('/post', (req, res) => data.push(req.body));
+app.put('/put', (req, res) => {
+    console.log(req.body)
+}) 
 
 app.listen(3000);
 

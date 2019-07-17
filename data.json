@@ -1,75 +1,14 @@
 [
-    { "id": "1", "column": "1", "type": "1", "title": "null", "headerType": "1", "data":
-        [
-            { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
-                [ 
-                    { "id": "1", "firstName": "Edita", "lastName": "Otto", "userName": "@slim" },
-                    { "id": "2", "firstName": "Lukas", "lastName": "Thornton", "userName": "@fat" },
-                    { "id": "3", "firstName": "Mike", "lastName": "the Bird", "userName": "@twitter" }
-                ]
-            }
+    { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
+        [ 
+            { "id": "1", "firstName": "Edita", "lastName": "Otto", "userName": "@slim" },
+            { "id": "2", "firstName": "Lukas", "lastName": "Thornton", "userName": "@fat" },
+            { "id": "3", "firstName": "Mike", "lastName": "the Bird", "userName": "@twitter" }
         ]
     },
-    { "id": "2", "column": "1", "type": "2", "title": "Conversation: Users", "headerType": "2", "data":
-        [
-            { "id": "1", "column": "1", "type": "2", "title": "article", "headerType": "2", "data": 
-                [ 
-                    { "id": "3", "author": "David", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
-                ]
-            }
-        ]
-    },
-    { "id": "3", "column": "2", "type": "2", "title": "Conversation: Software", "headerType": "2", "data":
-        [
-            { "id": "1", "column": "2", "type": "2", "title": "article", "headerType": "2", "data": 
-                [ 
-                    { "id": "3", "author": "Alex", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
-                ]
-            }
-        ]
-    },
-    { "id": "4", "column": "2", "type": "1", "title": "null", "headerType": "3", "data":
-        [
-            { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
-                [ 
-                    { "id": "1", "firstName": "Mark", "lastName": "Otto", "userName": "@shady" },
-                    { "id": "2", "firstName": "Jacob", "lastName": "Thornton", "userName": "@skinny" },
-                    { "id": "3", "firstName": "Larry", "lastName": "the Bird", "userName": "@facebook" }
-                ]
-            }
-        ]
-    },
-    { "id": "5", "column": "3", "type": "1", "title": "Dashboard: Users", "headerType": "3", "data":
-        [
-            { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
-                [ 
-                    { "id": "1", "firstName": "Ben", "lastName": "Otto", "userName": "@apple" },
-                    { "id": "2", "firstName": "Tom", "lastName": "Thornton", "userName": "@orange" },
-                    { "id": "3", "firstName": "Monica", "lastName": "the Bird", "userName": "@instagram" }
-                ]
-            }
-        ]
-    },
-    { "id": "6", "column": "3", "type": "1", "title": "null", "headerType": "0", "data":
-        [
-            { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
-                [ 
-                    { "id": "1", "firstName": "John", "lastName": "Otto", "userName": "@juice" },
-                    { "id": "2", "firstName": "Tim", "lastName": "Thornton", "userName": "@beer" },
-                    { "id": "3", "firstName": "Caroline", "lastName": "the Bird", "userName": "@linkedin" }
-                ]
-            }
-        ]
-    },
-    { "id": "7", "column": "3", "type": "1", "title": "null", "headerType": "1", "data":
-        [
-            { "id": "1", "column": "1", "type": "1", "title": "table", "headerType": "1", "data": 
-                [ 
-                    { "id": "1", "firstName": "Hanah", "lastName": "Otto", "userName": "@wine" },
-                    { "id": "2", "firstName": "Bucky", "lastName": "Thornton", "userName": "@burger" },
-                    { "id": "3", "firstName": "Larry", "lastName": "the Bird", "userName": "@pinterest" }
-                ]
-            }
+    { "id": "1", "column": "1", "type": "2", "title": "article", "headerType": "2", "data": 
+        [ 
+            { "id": "3", "author": "David", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
         ]
     }
 ]
