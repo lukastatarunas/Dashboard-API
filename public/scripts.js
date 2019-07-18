@@ -113,6 +113,40 @@ function post(event) {
 
 // PUT
 
+//if window location update widget and has id
 
+// function detectQueryString() {
+//   var currentUrl = window.location.href;
+//   var pattern = new RegExp(/\?+/g);
+//   return pattern.test(currentUrl);
+// }
+
+
+
+// if (detectQueryString()) {
+//   id 
+// } else {
+//   document.getElementById('result').innerHTML = 'The URL does not contain query string.';
+// }
+
+// if (window.location.href === "http://localhost:3000/update_widget.html") {
+//   detectQueryString();
+// }
+
+function onPutFormSubmit() {
+  
+}
+
+function put(event) {
+  event.preventDefault()
+  fetch("http://localhost:3000/put", {
+    method: 'PUT',
+    body: JSON.stringify(onPutFormSubmit()),
+    headers: {
+    'Content-Type': 'application/json'
+    }
+  })
+  return window.location.href = "http://localhost:3000"
+}
 
 // DELETE
