@@ -12,7 +12,7 @@ fetch("http://localhost:3000/data")
       if (item.type === tableType) {
         let headerType = item.headerType === "1" ? "thead-dark" : null;
         widget += `<table class="table">
-                    <thead class="${headerType}">
+                    <thead onclick="window.location.replace('http://localhost:3000/update_widget.html?id=${item.id}')" class="${headerType}">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">First Name</th>
@@ -23,11 +23,11 @@ fetch("http://localhost:3000/data")
                     <tbody>
                   `
                   item.data.forEach((rowData, index) => {
-                    widget += `<tr>
-                                <td>${index + 1}</td>
-                                <td>${rowData.firstName}</td>
-                                <td>${rowData.lastName}</td>
-                                <td>${rowData.userName}</td>
+                    widget += `<tr id="tr">
+                                <td id="index">${index + 1}</td>
+                                <td id="firstName">${rowData.firstName}</td>
+                                <td id="lastName">${rowData.lastName}</td>
+                                <td id="userName">${rowData.userName}</td>
                                </tr>
                               `
                   });
@@ -46,7 +46,7 @@ fetch("http://localhost:3000/data")
           articles += `<article class="article" id="article">${rowData.article}</article>`
         })
 
-        widget += `<nav class="nav">
+        widget += `<nav onclick="window.location.replace('http://localhost:3000/update_widget.html?id=${item.id}')" class="nav">
                     <p class="nav-paragraph">Dashboard: <strong>Users</strong></p>
                     <i class="fas fa-cog sidenav-icons nav-icon"></i>
                     <i class="fas fa-sort-down header-icon nav-icon"></i><br>
@@ -66,9 +66,9 @@ fetch("http://localhost:3000/data")
 // POST  
 
 function onPostFormSubmit() {
-  const typeSelection = document.getElementById("type-selection").value;
-  const headerTypeSelection = document.getElementById("header-type-selection").value;
-  if (typeSelection === "userList") {
+  let typeSelection = document.getElementById("type-selection").value;
+  let headerTypeSelection = document.getElementById("header-type-selection").value;
+  if (typeSelection === "tables") {
     if (headerTypeSelection === "dark") {
       let json = {
         "id": "1",
@@ -105,7 +105,6 @@ function post(event) {
     method: 'POST',
     body: JSON.stringify(onPostFormSubmit()),
     headers: {
-    'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
     }
   })
@@ -114,22 +113,6 @@ function post(event) {
 
 // PUT
 
-function onPutFormSubmit() {
-  const json = document.getElementById("textarea").value;
-  return JSON.parse(json)
-}
 
-function put(event) {
-  event.preventDefault()
-  fetch("http://localhost:3000/put", {
-    method: 'PUT',
-    body: JSON.stringify(onPostFormSubmit()),
-    headers: {
-    'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/json'
-    }
-  })
-  return window.location.href = "http://localhost:3000"
-}
 
 // DELETE

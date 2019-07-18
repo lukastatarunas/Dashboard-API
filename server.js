@@ -9,8 +9,8 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/data', (req, res) => res.send(data));
 app.post('/post', (req, res) => data.push(req.body));
-app.put('/put', (req, res) => {
-    console.log(req.body)
+app.put('/put/:id', (req, res) => {
+
 }) 
 
 app.listen(3000);
