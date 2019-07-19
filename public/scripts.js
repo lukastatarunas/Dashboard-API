@@ -6,7 +6,6 @@ const main = document.getElementById("main");
 fetch("http://localhost:3000/data")
   .then(res => res.json())
   .then(data => {
-    console.log(data)
     let widget = "";
     data.forEach(item => {
       widget += `<div class="main-card">`
@@ -153,7 +152,6 @@ if (detectId() != null) {
 function onPutFormSubmit(event) {
   event.preventDefault();
   let textarea = document.getElementById("textarea").value;
-  console.log(JSON.parse(textarea));
   fetch(`http://localhost:3000/put/${detectId()}`, {
     method: 'PUT',
     body: textarea,
