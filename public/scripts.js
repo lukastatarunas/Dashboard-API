@@ -6,6 +6,7 @@ const main = document.getElementById("main");
 fetch("http://localhost:3000/data")
   .then(res => res.json())
   .then(data => {
+    console.log(data)
     let widget = "";
     data.forEach(item => {
       widget += `<div class="main-card">`
@@ -105,10 +106,10 @@ function post(event) {
     method: 'POST',
     body: JSON.stringify(onPostFormSubmit()),
     headers: {
-    'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     }
   })
-  return window.location.href = "http://localhost:3000"
+  return window.location.href = "http://localhost:3000";
 }
 
 // PUT
@@ -125,53 +126,42 @@ if (detectId() != null) {
     .then(res => res.json())
     .then(data => {
       data.forEach(item => {
+        let typeSelection = document.getElementById("type-selection");
+        let headerTypeSelection = document.getElementById("header-type-selection");
+        let textarea = document.getElementById("textarea");
         if (item.id === detectId()) {
           if (detectId() === "1") {
-            let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "1";
-            let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "1";
-            let textarea = document.getElementById("textarea");
-            textarea = item.data;
-            console.log(item.data);
+            textarea.value = JSON.stringify(item.data);
           }
           else if (detectId() === "2") {
-            let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "1";
-            let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "2";
-            let textarea = document.getElementById("textarea");
-            textarea = item.data;
-            console.log(item.data);
+            textarea.value = JSON.stringify(item.data);
           }
           else {
-            let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "2";
-            let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "2";
-            let textarea = document.getElementById("textarea");
-            textarea = item.data;
-            console.log(item.data);
+            textarea.value = JSON.stringify(item.data);
           }
         }
       })
     })
 }
 
-function onPutFormSubmit() {
-  
-}
-
-function put(event) {
-  event.preventDefault()
-  fetch("http://localhost:3000/put", {
+function onPutFormSubmit(event) {
+  event.preventDefault();
+  let textarea = document.getElementById("textarea").value;
+  console.log(JSON.parse(textarea));
+  fetch(`http://localhost:3000/put/${detectId()}`, {
     method: 'PUT',
-    body: JSON.stringify(onPutFormSubmit()),
+    body: textarea,
     headers: {
-    'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     }
   })
-  return window.location.href = "http://localhost:3000"
+  return window.location.href = "http://localhost:3000";
 }
 
 // DELETE

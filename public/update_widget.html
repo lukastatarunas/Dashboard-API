@@ -5,7 +5,7 @@
         <title>Update Widget</title>
     </head>
     <body>
-        <form method="PUT" name="putForm" onsubmit="return put(event)" autocomplete="off" id="putForm">
+        <form method="PUT" name="putForm" onsubmit="return onPutFormSubmit(event)" autocomplete="off" id="putForm">
             <br>
             <select name="type-selection" id="type-selection">
                 <option value="1">tables</option>
@@ -16,7 +16,7 @@
                 <option value="2">light</option>
             </select><br><br>
             <textarea name="textarea" rows="4" cols="50" id="textarea"></textarea><br><br>
-            <input onclick="onPutFormSubmit()" type="submit" value="Submit" id="submit"><br><br>
+            <input onclick="onPutFormSubmit(event)" type="submit" value="Submit" id="submit"><br><br>
             <button>Delete</button>
         </form>
         <script src="scripts.js"></script>
