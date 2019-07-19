@@ -163,3 +163,13 @@ function onPutFormSubmit(event) {
 }
 
 // DELETE
+
+function onDeleteButtonClick() {
+  fetch(`http://localhost:3000/delete/${detectId()}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  return window.location.href = "http://localhost:3000";
+}

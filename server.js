@@ -29,7 +29,12 @@ app.put('/put/:id', (req, res) => {
             data[2].data[0] = req.body[0];
         })
     }
-}); 
+});
+app.delete('/delete/:id', (req, res) => {
+    console.log(req.params.id);
+    // data.slice(req.params.id);
+    data.splice(req.params.id - 1, 1);
+});
 
 app.listen(3000);
 
