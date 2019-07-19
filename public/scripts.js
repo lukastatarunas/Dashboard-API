@@ -113,23 +113,41 @@ function post(event) {
 
 // PUT
 
-function detectQueryString() {
-  var currentUrl = window.location.href;
-  var pattern = new RegExp(/\?+/g);
-  return pattern.test(currentUrl);
+function detectId() {
+  let currentUrl = window.location.href;
+  let url = new URL(currentUrl);
+  let id = url.searchParams.get("id");
+  return id;
 }
 
-let id;
-
-function isId() {
-  if (detectQueryString()) {
-     return true;
-  }
+if (detectId() != null) {
+  fetch("http://localhost:3000/data")
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(item => {
+        if (item.id === detectId()) {
+          if (detectId() === "1") {
+            let typeSelection = document.getElementById("type-selection");
+            typeSelection.value = "1";
+            let headerTypeSelection = document.getElementById("header-type-selection");
+            headerTypeSelection.value = "1";
+          }
+          else {
+            let typeSelection = document.getElementById("type-selection");
+            typeSelection.value = "2";
+            let headerTypeSelection = document.getElementById("header-type-selection");
+            headerTypeSelection.value = "2";
+          }
+        }
+      })
+    })
 }
 
-if (window.location.href === "http://localhost:3000/update_widget.html" && isId()) {
-  console.log("success");
-}
+
+
+// if (window.location.href === "http://localhost:3000/update_widget.html" && detectId()) {
+//   console.log("success");
+// }
 
 function onPutFormSubmit() {
   
