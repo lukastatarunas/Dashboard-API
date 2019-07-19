@@ -68,8 +68,8 @@ fetch("http://localhost:3000/data")
 function onPostFormSubmit() {
   let typeSelection = document.getElementById("type-selection").value;
   let headerTypeSelection = document.getElementById("header-type-selection").value;
-  if (typeSelection === "tables") {
-    if (headerTypeSelection === "dark") {
+  if (typeSelection === "1") {
+    if (headerTypeSelection === "1") {
       let json = {
         "id": "1",
         "type": "1",
@@ -142,12 +142,6 @@ if (detectId() != null) {
       })
     })
 }
-
-
-
-// if (window.location.href === "http://localhost:3000/update_widget.html" && detectId()) {
-//   console.log("success");
-// }
 
 function onPutFormSubmit() {
   
