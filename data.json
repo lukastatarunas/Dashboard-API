@@ -1,21 +1,21 @@
 [
-    { "id": "1", "type": "1", "headerType": "1", "data": 
+    { "id": "1", "type": "1", "headerType": "1", "data":
         [ 
             { "id": "1", "firstName": "Edita", "lastName": "Otto", "userName": "@slim" },
             { "id": "2", "firstName": "Lukas", "lastName": "Thornton", "userName": "@fat" },
-            { "id": "3", "firstName": "Mike", "lastName": "the Bird", "userName": "@twitter" }
+            { "id": "3", "firstName": "Cat", "lastName": "Cat", "userName": "@cat" }
         ]
     },
-    { "id": "2", "type": "2", "headerType": "2", "data": 
+    { "id": "2", "type": "1", "headerType": "2", "data":
         [ 
-            { "id": "4", "author": "David", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
+            { "id": "1", "firstName": "React", "lastName": "Facebook", "userName": "@react" },
+            { "id": "2", "firstName": "Angular", "lastName": "Google", "userName": "@angular" },
+            { "id": "3", "firstName": "Vue", "lastName": "Amazon", "userName": "@vue" }
         ]
     },
-    { "id": "3", "type": "1", "headerType": "2", "data": 
+    { "id": "3", "type": "2", "headerType": "2", "data":
         [ 
-            { "id": "1", "firstName": "Edita", "lastName": "Otto", "userName": "@slim" },
-            { "id": "2", "firstName": "Lukas", "lastName": "Thornton", "userName": "@fat" },
-            { "id": "3", "firstName": "Mike", "lastName": "the Bird", "userName": "@twitter" }
+            { "id": "1", "author": "David", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
         ]
     }
 ]

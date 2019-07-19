@@ -131,18 +131,27 @@ if (detectId() != null) {
             typeSelection.value = "1";
             let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "1";
+            let textarea = document.getElementById("textarea");
+            textarea = item.data;
+            console.log(item.data);
           }
-          else if (detectId() === "3") {
+          else if (detectId() === "2") {
             let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "1";
             let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "2";
+            let textarea = document.getElementById("textarea");
+            textarea = item.data;
+            console.log(item.data);
           }
           else {
             let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "2";
             let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "2";
+            let textarea = document.getElementById("textarea");
+            textarea = item.data;
+            console.log(item.data);
           }
         }
       })
