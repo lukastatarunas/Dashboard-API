@@ -31,9 +31,16 @@ app.put('/put/:id', (req, res) => {
     }
 });
 app.delete('/delete/:id', (req, res) => {
-    console.log(req.params.id);
-    // data.slice(req.params.id);
-    data.splice(req.params.id - 1, 1);
+    console.log(req.params.id)
+    if (req.params.id === data[0].id) {
+        data.shift();
+    }
+    else if (req.params.id === data[2].id) {
+        data.pop();
+    }
+    else {
+
+    }
 });
 
 app.listen(3000);
