@@ -10,5 +10,12 @@
         [ 
             { "id": "4", "author": "David", "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas saepe voluptatum similique dolores ea, reiciendis sapiente. Est eveniet porro ad, cupiditate numquam voluptates dignissimos provident, sequi possimus amet aliquam dolore?" }
         ]
+    },
+    { "id": "3", "type": "1", "headerType": "2", "data": 
+        [ 
+            { "id": "1", "firstName": "Edita", "lastName": "Otto", "userName": "@slim" },
+            { "id": "2", "firstName": "Lukas", "lastName": "Thornton", "userName": "@fat" },
+            { "id": "3", "firstName": "Mike", "lastName": "the Bird", "userName": "@twitter" }
+        ]
     }
 ]

@@ -132,6 +132,12 @@ if (detectId() != null) {
             let headerTypeSelection = document.getElementById("header-type-selection");
             headerTypeSelection.value = "1";
           }
+          else if (detectId() === "3") {
+            let typeSelection = document.getElementById("type-selection");
+            typeSelection.value = "1";
+            let headerTypeSelection = document.getElementById("header-type-selection");
+            headerTypeSelection.value = "2";
+          }
           else {
             let typeSelection = document.getElementById("type-selection");
             typeSelection.value = "2";
