@@ -35,11 +35,11 @@ app.delete('/delete/:id', (req, res) => {
     if (req.params.id === data[0].id) {
         data.shift();
     }
-    else if (req.params.id === data[2].id) {
+    else if (req.params.id == data.length) {
         data.pop();
     }
     else {
-
+        data.splice(req.params.id - 1, 1);
     }
 });
 
