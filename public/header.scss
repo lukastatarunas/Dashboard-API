@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
+    padding: 0 10px;
+    background-color: $whiteColor;
+  }
+  
+  .menu-group {
+    display: flex;
+  }
+  
+  .menu-item, .search-item {
+    padding: 10px;
+  }
+  
+  a.header-link {
+    color: #BBB8C9;
+    &:hover {
+      color: #2B2839;
+      text-decoration: none;
+    }
+  }
+  
+  .search {
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+  }
+  
+  .header-img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }

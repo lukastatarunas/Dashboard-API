@@ -1,0 +1,44 @@
+.footer {
+    background-color: #ECEFF4;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  
+  .footer-card {
+    background-color: $whiteColor;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+  
+  .footer-card-1:hover, .footer-card-2:hover {
+    background-color: #D8D8D8;
+  }
+  
+  .footer-card-3 {
+    background-color: #FC434B;
+    color: $whiteColor;
+    &:hover {
+      background-color: #FF0000;
+    }
+  }
+  
+  .footer-card-4 {
+    background-color: #697A84;
+    color: $whiteColor;
+    &:hover {
+      background-color: #606060;
+    }
+  }
+  
+  .footer-icons {
+    margin-top: 20px;
+  }
+  
+  .bandwidth, .dailysales {
+    color: $whiteColor;
+  }

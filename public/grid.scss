@@ -1,0 +1,104 @@
+@mixin column-count($property) {
+    -webkit-column-count: $property;
+    -moz-column-count: $property;
+    column-count: $property;
+  }
+  
+  .main {
+    @include column-count(3);
+    background-color: #ECEFF4;
+    // -moz-column-count: 3;
+    // -webkit-column-count: 3;
+    // column-count: 3;
+    height: 100%;
+  }
+  
+  .main-card {
+    border-radius: 10px;
+    background-color: $whiteColor;
+    width: 100%;
+    display: inline-block;
+    margin: 15px;
+  }
+
+  .table-link, .nav-link {
+    text-decoration: none;
+  }
+  
+  .nav-paragraph {
+    margin: 20px;
+    margin-right: auto;
+  }
+  
+  .nav-icon {
+    margin-top: 25px;
+    margin-right: 20px;
+  }
+  
+  .img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .2s;
+    &:hover {
+      -ms-transform: scale(1.5);
+      /* IE 9 */
+      -webkit-transform: scale(1.5);
+      /* Safari 3-8 */
+      transform: scale(1.5);
+    }
+  }
+  
+  .sub-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .sub-card {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .sub-card-1 {
+    background-color: #697A84;
+    color: $whiteColor;
+    display: grid;
+    justify-content: center;
+  }
+  
+  .sub-card-2 {
+    background-color: #02A8FE;
+    color: $whiteColor;
+    display: grid;
+    justify-content: center;
+  }
+  
+  .sub-card-3 {
+    background-color: #2B2937;
+    color: $whiteColor;
+    display: grid;
+    justify-content: center;
+  }
+  
+  .sub-card-4 {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .sub-card-1:hover {
+    background-color: #606060;
+  }
+  
+  .sub-card-2:hover {
+    background-color: #0000FF;
+  }
+  
+  .sub-card-3:hover {
+    background-color: #000000;
+  }
+  
+  .sub-card-4:hover {
+    background-color: #D8D8D8;
+  }

@@ -102,6 +102,9 @@ a.header-link {
   display: inline-block;
   margin: 15px; }
 
+.table-link, .nav-link {
+  text-decoration: none; }
+
 .nav-paragraph {
   margin: 20px;
   margin-right: auto; }
@@ -227,7 +230,5 @@ a.header-link {
 @media (max-width: 947px) {
   .strong {
     display: none; } }
-.table-link, .nav-link {
-  text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

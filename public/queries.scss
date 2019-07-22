@@ -1,0 +1,26 @@
+@media (max-width: 1308px) {
+    .main {
+      @include column-count(2);
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .main {
+      @include column-count(1);
+    }
+    .sub-card-wrapper {
+      flex-direction: column;
+    }
+    .sub-card {
+      width: 100%;
+    }
+    .footer {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+  
+  @media (max-width: 947px) {
+    .strong {
+      display: none;
+    }
+  }
