@@ -1,3 +1,5 @@
+$whiteColor: #FFFFFF;
+
 * {
     padding: 0;
     margin: 0;
@@ -78,7 +80,7 @@
     top: 0;
     z-index: 9999999;
     padding: 0 10px;
-    background-color: #FFFFFF;
+    background-color: $whiteColor;
   }
   
   .menu-group {
@@ -124,7 +126,7 @@
   
   .main-card {
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: $whiteColor;
     width: 100%;
     display: inline-block;
     margin: 15px;
@@ -168,21 +170,21 @@
   
   .sub-card-1 {
     background-color: #697A84;
-    color: #FFFFFF;
+    color: $whiteColor;
     display: grid;
     justify-content: center;
   }
   
   .sub-card-2 {
     background-color: #02A8FE;
-    color: #FFFFFF;
+    color: $whiteColor;
     display: grid;
     justify-content: center;
   }
   
   .sub-card-3 {
     background-color: #2B2937;
-    color: #FFFFFF;
+    color: $whiteColor;
     display: grid;
     justify-content: center;
   }
@@ -219,7 +221,7 @@
   }
   
   .footer-card {
-    background-color: #FFFFFF;
+    background-color: $whiteColor;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
@@ -235,7 +237,7 @@
   
   .footer-card-3 {
     background-color: #FC434B;
-    color: #FFFFFF;
+    color: $whiteColor;
     &:hover {
       background-color: #FF0000;
     }
@@ -243,7 +245,7 @@
   
   .footer-card-4 {
     background-color: #697A84;
-    color: #FFFFFF;
+    color: $whiteColor;
     &:hover {
       background-color: #606060;
     }
@@ -254,7 +256,7 @@
   }
   
   .bandwidth, .dailysales {
-    color: #FFFFFF;
+    color: $whiteColor;
   }
   
   /* FOOTER END */
