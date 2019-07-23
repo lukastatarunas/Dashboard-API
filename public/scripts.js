@@ -3,6 +3,8 @@ const main = document.getElementById("main");
 
 // GET
 
+// document.getElementById("spinner").style.display  = "none";
+
 fetch("http://localhost:3000/data")
   .then(res => res.json())
   .then(data => {
@@ -59,7 +61,10 @@ fetch("http://localhost:3000/data")
       }
       widget += `</div>`
     });
-    main.insertAdjacentHTML("afterbegin", widget);
+    setTimeout(function(){ 
+      document.getElementById("spinner").style.display  = "none";
+      main.insertAdjacentHTML("afterbegin", widget);
+    }, 1000);
   })
   .catch(err => console.log(err));
 
